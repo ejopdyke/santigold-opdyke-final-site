@@ -1,0 +1,117 @@
+.btn-secondary{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+
+body {
+  font-family: 'Bowlby One', cursive;
+  color: #F2C94C;
+}
+
+body#homepage {
+background-image: url("../images/homepage-background-image.jpg");
+background-size:cover;
+}
+
+body.nothome {
+background-color: #219653;
+}
+
+h1 {
+text-align: center;
+}
+
+.fa-bars {
+  color: #F2C94C;
+  font-size: 50px;
+  background-color: transparent;
+  text-align: right;
+}
+.dropdown {
+  position: absolute;
+  right:0;
+}
+
+.mainframe {
+color: black;
+}
+
+/* about page */
+#aboutpage {
+  background-image: url("../images/aboutpage-background.jpg");
+}
+
+ul {
+  list-style-type: square;
+}
+
+/*  Dicography Page */
+#discographypage {
+  background-image: url("../images/discography-background.jpg");
+}
+
+.albumcover {
+  height:300px;
+  Width:300px;
+}
+
+/* media page */
+
+#mediabackground {
+  background-image: url("../images/mediapage-background.jpg");
+}
+
+.mediaimage{
+  height:250px;
+  width:300px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 70px;
+}
+
+.tablebkg {
+  background-color: #219653;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px
+}
+.tablepadding{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+/*.sidemediaimages{
+  padding-left: 15%;
+}
+/* Tour Page */
+
+#tourpage {
+  background-image: url("../images/tourpage-background-image.jpg");
+  background-size: cover;
+  color: white;
+  opacity: .6;
+}
+
+#headersize {
+  font-size: 25px;
+}
+
+.tourrow {
+  margin-bottom: 30px;
+}
+
+.datecol {
+  text-align: center;
+}
+
+.citycol {
+
+}
+
+.venuecol {}
+
+.ticketcol {
+  text-align: center;
+}
