@@ -1,6 +1,7 @@
-.btn-secondary{
-  background-color: transparent;
-  border-color: transparent;
+/*an override of bootstrap styling*/
+#dropdownMenuButton{
+  background-color: transparent !important;
+  border-color: transparent !important;
 }
 
 
@@ -37,6 +38,15 @@ text-align: center;
 color: black;
 }
 
+#dropdownbkg{
+  background-color: transparent;
+}
+
+.dropdown-item{
+  color: #F2C94C;
+  background-color: #219653;
+}
+
 /* about page */
 #aboutpage {
   background-image: url("../images/aboutpage-background.jpg");
@@ -59,6 +69,7 @@ ul {
 /* media page */
 
 #mediabackground {
+  padding: 10px;
   background-image: url("../images/mediapage-background.jpg");
 }
 
@@ -70,7 +81,15 @@ ul {
   padding-left: 70px;
 }
 
-.tablebkg {
+.labelbkg{
+  padding: 10px;
+  margin: 20px;
+  background-color:#219653;
+}
+.labelrowpadding{
+  padding: 10px;
+}
+/*.tablebkg {
   background-color: #219653;
   padding-left: 10px;
   padding-right: 10px;
@@ -82,6 +101,7 @@ ul {
   padding-bottom: 10px;
   padding-left: 10px;
 }
+*/
 /*.sidemediaimages{
   padding-left: 15%;
 }
@@ -91,7 +111,7 @@ ul {
   background-image: url("../images/tourpage-background-image.jpg");
   background-size: cover;
   color: white;
-  opacity: .6;
+  /*opacity: .6;*/
 }
 
 #headersize {
@@ -100,6 +120,8 @@ ul {
 
 .tourrow {
   margin-bottom: 30px;
+/* offset-x / offset y / color */
+  text-shadow: 2px 2px black;
 }
 
 .datecol {
@@ -114,4 +136,51 @@ ul {
 
 .ticketcol {
   text-align: center;
+}
+
+/* merchpage filterizer*/
+
+.merchsize{
+  height:300px;
+  width: 300px;
+
+}
+
+.container {
+  overflow: hidden;
+}
+
+.filterDiv {
+  background-color: transparent;
+  margin:20px;
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #F2C94C;
+  cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #F2C94C;
+  color: white;
 }

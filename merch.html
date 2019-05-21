@@ -15,22 +15,94 @@
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <i class="fas fa-bars"></i>
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="index.html">home</a>
-    <a class="dropdown-item" href="about.html">about</a>
-    <a class="dropdown-item" href="discography.html">discography</a>
-    <a class="dropdown-item" href="merch.html">merch</a>
-    <a class="dropdown-item" href="media.html">media</a>
-    <a class="dropdown-item" href="tour.html">tour</a>
+  <div class="dropdown-menu dropdown-menu-right" id="dropdownbkg" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="index.html">Home</a>
+    <a class="dropdown-item" href="about.html">About</a>
+    <a class="dropdown-item" href="discography.html">Discography</a>
+    <a class="dropdown-item" href="merch.html">Merch</a>
+    <a class="dropdown-item" href="media.html">Media</a>
+    <a class="dropdown-item" href="tour.html">Tour</a>
   </div>
 </div>
 
 <!-- ------------- header -------->
 <h1>SANTIGOLD</h1>
 <!-- ------------- end header ------>
+
+<!-- Control buttons -->
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('apparel')"> Apparel</button>
+  <button class="btn" onclick="filterSelection('accesories')"> Accesories</button>
+  <button class="btn" onclick="filterSelection('vinyl')"> Vinyl</button>
+</div>
+
+<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+<div class="container">
+  <div class="row">
+      <div class="filterDiv apparel col-3"> <img class=merchsize src="./assets/images/merchpage-apparel-1.png"/></div>
+      <div class="filterDiv apparel col-3"><img class=merchsize src="./assets/images/merchpage-apparel-2.png"/></div>
+      <div class="filterDiv apparel col-3"><img class=merchsize src="./assets/images/merchpage-apparel-3.png"/></div>
+      <div class="filterDiv accesories col-3"><img class=merchsize src="./assets/images/merchpage-accesories-1.png"/></div>
+      <div class="filterDiv accesories col-3"><img class=merchsize src="./assets/images/merchpage-accesories-2.png"/></div>
+      <div class="filterDiv accesories col-3"><img class=merchsize src="./assets/images/merchpage-accesories-3.png"/></div>
+      <div class="filterDiv vinyl col-3"><img class=merchsize src="./assets/images/merchpage-vinyl-1.png"/></div>
+      <div class="filterDiv vinyl col-3"><img class=merchsize src="./assets/images/merchpage-vinyl-2.png"/></div>
+  </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
 </body>
 </html>
