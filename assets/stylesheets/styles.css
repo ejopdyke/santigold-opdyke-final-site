@@ -58,6 +58,14 @@ color: black;
   transition: all .5s ease-in-out;
 }
 
+/* .box2{
+  width: 75px;
+  height: 15px;
+  background: #219653;
+  color: #F2C94C;
+  padding: 3px;
+} */
+
 .rounded-corners {
   border-radius: 15px;
 }
@@ -66,17 +74,14 @@ color: black;
 #aboutpage {
   background-image: url("../images/aboutpage-background.jpg");
   background-size: cover;
+  font-family:'open-sans', sans-serif;
+  font-size: 20px;
+  color: black;
+  text-shadow: 1px 1px black;
 }
 p { text-indent: 2em; }
 
-.floatleft{
-  float:left;
-  margin: 4px;
-}
-img.floatright (
-  float:right;
-  margin: 4px;
-  )
+
 /*trying to figure out the tittle css code from figma dimensions*/
 .titlebkg{
   /*position: absolute;
@@ -103,6 +108,7 @@ ul {
 .albumcover {
   height:300px;
   Width:300px;
+  align: center;
 }
 
 .box-discography {
@@ -120,6 +126,7 @@ ul {
 #mediabackground {
   padding: 10px;
   background-image: url("../images/mediapage-background.jpg");
+  background-size: cover;
 }
 
 .mediaimage{
