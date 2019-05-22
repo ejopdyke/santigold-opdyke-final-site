@@ -47,25 +47,52 @@ color: black;
   background-color: #219653;
 }
 
+.box {
+  width: 100px;
+  height: 25px;
+  margin: 15px;
+  background: #F2C94C;
+  color: #219653;
+  text-align: center;
+  /* https://www.w3schools.com/css/css3_transitions.asp */
+  transition: all .5s ease-in-out;
+}
+
+.rounded-corners {
+  border-radius: 15px;
+}
+
 /* about page */
 #aboutpage {
   background-image: url("../images/aboutpage-background.jpg");
   background-size: cover;
 }
+p { text-indent: 2em; }
 
-/* trying to figure out the tittle css code from figma dimensions
-#tittlerectangle{
-  position: absolute;
+.floatleft{
+  float:left;
+  margin: 4px;
+}
+img.floatright (
+  float:right;
+  margin: 4px;
+  )
+/*trying to figure out the tittle css code from figma dimensions*/
+.titlebkg{
+  /*position: absolute;
   width: 188.88px;
   height: 86.35px;
   left: 216px;
   top: 108.41px;
+  transform: rotate(144.63deg);*/
   background-color: #6FCF97;
-  transform: rotate(144.63deg);
-} */
+}
 
 ul {
   list-style-type: square;
+}
+.genrelist{
+  position: right;
 }
 
 /*  Dicography Page */
@@ -78,6 +105,16 @@ ul {
   Width:300px;
 }
 
+.box-discography {
+  width: 175px;
+  height: 25px;
+  margin: 15px;
+  background: #F2C94C;
+  color: #219653;
+  text-align: center;
+  /* https://www.w3schools.com/css/css3_transitions.asp */
+  transition: all .5s ease-in-out;
+}
 /* media page */
 
 #mediabackground {
@@ -101,6 +138,17 @@ ul {
 .labelrowpadding{
   padding: 10px;
 }
+
+/* .box-medialabels {
+  width: 130px;
+  height: 25px;
+ margin: 15px;
+  background: #219653;
+  color: #F2C94C;
+  text-align: center ;
+  transition: all .5s ease-in-out;
+} */
+
 /*.tablebkg {
   background-color: #219653;
   padding-left: 10px;
