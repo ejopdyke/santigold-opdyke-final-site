@@ -12,7 +12,7 @@ body {
 
 body#homepage {
 background-image: url("../images/homepage-background-image.jpg");
-background-size:cover;
+background-size: cover;
 }
 
 body.nothome {
@@ -50,7 +50,19 @@ color: black;
 /* about page */
 #aboutpage {
   background-image: url("../images/aboutpage-background.jpg");
+  background-size: cover;
 }
+
+/* trying to figure out the tittle css code from figma dimensions
+#tittlerectangle{
+  position: absolute;
+  width: 188.88px;
+  height: 86.35px;
+  left: 216px;
+  top: 108.41px;
+  background-color: #6FCF97;
+  transform: rotate(144.63deg);
+} */
 
 ul {
   list-style-type: square;
@@ -139,6 +151,14 @@ ul {
 }
 
 /* merchpage filterizer*/
+#merchbkgimage{
+  background-image: url("../images/merchpage-background.jpg");
+  background-size: cover;
+}
+
+/*.buttonpadding{
+  padding-bottom: 10px;
+} */
 
 .merchsize{
   height:300px;
@@ -171,15 +191,15 @@ ul {
   outline: none;
   padding: 12px 16px;
   background-color: #F2C94C;
+  color: #219653;
   cursor: pointer;
 }
 
-/* Add a light grey background on mouse-over */
 .btn:hover {
-  background-color: #ddd;
+  background-color: orange;
+  color:#219653;
 }
 
-/* Add a dark background to the active button */
 .btn.active {
   background-color: #F2C94C;
   color: white;
